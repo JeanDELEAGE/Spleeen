@@ -1,0 +1,54 @@
+/*---------------------------- SECTIONS ----------------------------*/
+
+.intro{
+    height: 70vh;
+    width: 100vw;
+    padding-top: 10vh;
+}
+.bi{
+    background-image: url("../../img/FOND.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 170%;
+}
+
+.editor>header{
+    margin: 2% 0;
+}
+
+.timeline>.controller{
+    height: 50px;
+}
+
+footer h5 {
+    margin-top: 0;
+}
+footer a {
+    margin-top: 10px;
+    line-height: 3rem;
+}
+
+footer{
+    padding: 2% 0;
+    margin-top: 5%;
+    border-top: 1px solid #816bc7;
+}
+
+.facebook,
+.instagram{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-indent: 30px;
+    line-height: 2rem;
+}
+.instagram {
+    background-image: url("../../img/footer/INSTA.svg");
+}
+
+.facebook{
+    background-image: url("../../img/footer/FB.svg");
+}
+

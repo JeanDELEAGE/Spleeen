@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Exercice</title>
+    <link rel="stylesheet" href="../styles/css/normalize.css">
+    <link rel="stylesheet" href="../styles/css/class.css">
+    <link rel="stylesheet" href="../styles/css/timeline.css">
+    <link rel="stylesheet" href="../styles/css/stylesheet.css">
+    <link rel="stylesheet" href="../styles/css/page_layout.css">
+    <link rel="stylesheet" href="../styles/css/grid.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        window.onload = function () {
+            var card = new Vue({
+                el: '#card',
+                data: {
+                    musicsheets: [],
+                },
+                mounted() {
+                    // Appel Ajax via Axios en get
+                    axios.get('http://localhost/spleeen/backend/controllers/listMusicsheets.php')
+                        // Réponse et récupération des données
+                        .then(response => {
+                            this.musicsheets = response.data;
+                            console.log(this)
+                        })
+                        .catch(function(error){
+                            console.log(error)
+                        });
+                }
+            })
+        }
+    </script>
+</head>
+<body class="bc-purple-dark-ultra p-absolute editor">
+<header class="p-relative">
+    <ul class="d-grid m-0-auto">
+        <li class="gcs-1 span-4 d-flex just-c-start m-auto-0"><a href="">Menu</a></li>
+        <li class="span-4">
+            <figure class="d-flex flex-d-column just-c-c align-i-c">
+                <img src="../img/logo.svg" alt="Spleeen" width="50" height="50"
+                     class="logo">
+                <figcaption class="spleeen"><a href="#">Spleeen</a></figcaption>
+            </figure>
+        </li>
+        <li class="span-1 d-flex just-c-f-e m-auto-0">
+            <a href="">Premium</a>
+        </li>
+        <li class="span-3 d-flex just-c-f-e m-auto-0">
+            <button class="greenbutton" onclick="window.location.href = '#';">Se connecter</button>
+            <button class="greenbutton" onclick="window.location.href = '#';">S'inscrire</button>
+        </li>
+    </ul>
+</header>
+<main class="timeline">
+    <div class="timeline-header d-grid">
+        <div class="users-mode grs-1 gcs-1 span-6">
+            <p>{{Éditeur}}</p>
+        </div>
+        <div class="span-6 toggle-mode d-flex just-c-f-e grs-1">
+            <button class="violetbutton t-maj1" onclick="window.location.href = '#';">Visualiser</button>
+            <button class="whitebutton t-maj" onclick="window.location.href = '#';">Sauvegarder</button>
+        </div>
+
+        <div class="users-infos grs-2 gcs-1 span-6">
+            <h1>{{timeline_title}}</h1>
+            <p>{{timeline_description}}</p>
+        </div>
+
+        <div class="controller grs-2 span-6 d-flex just-c-f-e m-auto-0">
+            <button class="plus gcs-10">Plus</button>
+            <button class="less gce-13">Moins</button>
+            <button class="share-button">Share</button>
+        </div>
+    </div>
+    <div class="timeline-content">
+        <div id="card" class="grid_timeline">
+            <div class="card" v-for="musicsheet in musicsheets" style="--dist:0;">
+                <div style="left: 0; width: 100%; height: 80px; position: relative;"><iframe v-bind:src="musicsheet_song" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media"></iframe></div>
+                <div class="img-container"><img v-bind:src="musicsheet_cover_picture" alt="timeline_image" class="timeline-img"></div>
+                <span>{{musicsheet_creation_date}}</span>
+                <h3>{{musicsheet_title}}</h3>
+                <p class="d-block ox-none">{{musicsheet_description}}</p>
+                <button class="openEdit">Modifier</button>
+            </div>
+        <button class="buttons add-sheet d-flex just-c-c align-i-c m-auto-0 bc-purple-dark-ultra" id="addSheet"><img
+            src="../img/plus.svg" alt="add_music" width="43px" height="43px">
+        </button>
+        </div>
+    </div>
+    <div class="popup p-absolute d-none full-screen">
+        <div id="editor">
+            <div class="editor" v-for="user in contenus">
+                <div class="img-container"><img v-bind:src="user.profile_picture" alt="timeline_image" class="timeline-img"></div>
+                <div class="link-container">
+                    <div class="link">
+                        <p>Coller le lien vers le titre souhaité.</p>
+                        <button><img src="../img/Help.svg" alt="help"></button>
+                    </div>
+                </div>
+                <span class="date">{{ user.birthday }}</span>
+                <h3 class="title">{{ user.username }}</h3>
+                <p class="d-block ox-none">{{ user.description }}</p>
+                <span class="count">359/400</span>
+                <button class="closeEdit">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="blur p-absolute d-none"></div>
+</main>
+<footer>
+    <div class="footer d-grid">
+        <div class="gcs-1 m-auto-0">
+            <figure class="d-flex flex-d-column just-c-c align-i-c">
+                <img src="../img/logo.svg" alt="Spleeen" width="50" height="50"
+                     class="logo">
+                <figcaption class="spleeen"><a href="#">@2021 Spleeen</a></figcaption>
+            </figure>
+        </div>
+
+        <div class="d-flex flex-d-column gcs-3 gce-5 m-auto-0">
+            <h5>À propos</h5>
+            <a href="a-propos.vue.js">Qui sommes-nous ?</a>
+            <a href="http://mmimontbeliard.com/">MMI Montbéliard</a>
+        </div>
+
+        <div class="d-flex flex-d-column gcs-5 gce-7 m-auto-0">
+            <h5>Mentions légales</h5>
+            <a>Qui sommes-nous ?</a>
+            <a>MMI Montbéliard</a>
+        </div>
+
+        <div class="d-flex flex-d-column gcs-7 gce-10 m-auto-0">
+            <h5>Nous contacter</h5>
+            <form method="post" action="mailto:votreemail@email.com" class="d-flex flex-d-row">
+                <textarea rows="5" cols="20" wrap="physique" name="commentaires">Veuillez renseignez votre adresse email.</textarea><br/>
+                <input type="submit" value="Valider"/>
+            </form>
+        </div>
+
+        <div class="gcs-11 m-auto-0">
+            <h5>Nous retrouver</h5>
+            <a href="https://www.facebook.com/Spleeen-106491278189124" class="Facebook">Facebook</a>
+            <a href="https://www.instagram.com/spleeen1/" class="Instagram">Instagram</a>
+        </div>
+    </div>
+</footer>
+<script>
+    let cibling = document.querySelector(".courant");
+    let popup = document.querySelector(".popup");
+    let blur = document.querySelector(".blur");
+
+    // addEventListener sur les deux boutons zoom+ et zoom- et donner une valeur d'entrée à la fonction cardZoom selon
+    // le bouton, cardZoom est positif si on zoom, négatif si on dézoom
+    document.querySelector(".timeline").addEventListener("pointerdown", select);
+    document.querySelector(".grid_timeline").addEventListener("pointerdown", select);
+    popup.addEventListener("pointerdown", select);
+
+    function select(evt) {
+        if (evt.target.matches(".card *")) {
+            if (evt.target.matches(".timeline-img")) {
+                cibling = document.querySelector(".card");
+                cibling.classList.add("courant");
+                clear(cibling);
+                console.log('clique sur img : ', cibling)
+            }
+            else{
+            cibling = evt.target.parentElement;
+            cibling.classList.add("courant");
+            clear(cibling);
+            }
+        }
+
+        if (evt.target.matches(".plus")) cardZoom(cibling, true);
+        if (evt.target.matches(".less")) cardZoom(cibling, false);
+
+        if (evt.target.matches(".openEdit")) openEdit();
+        if (evt.target.matches(".closeEdit")) closeEdit();
+    }
+
+    function clear(cibling) {
+        cibling.className = "card courant";
+        cibling.style.setProperty("--dist", 0);
+
+        var ciblingAvant = cibling;
+        var ciblingApres = cibling;
+
+        let i = 1;
+        while ((ciblingAvant = ciblingAvant.previousElementSibling) !== null) {
+            console.log("card avant le courant :", ciblingAvant);
+            ciblingAvant.className = "card avant";
+            ciblingAvant.style.setProperty("--dist", i);
+            i++;
+        }
+
+        let j = 1;
+        while ((ciblingApres = ciblingApres.nextElementSibling) !== null) {
+            console.log("le slide après le courant :", ciblingApres);
+            ciblingApres.className = "card apres";
+            ciblingApres.style.setProperty("--dist", j);
+            j++;
+        }
+        document.querySelector("#addSheet").className="buttons add-sheet d-flex just-c-c align-i-c m-auto-0 bc-purple-dark-ultra";
+    }
+
+    function openEdit() {
+        popup.classList.remove("d-none");
+        popup.classList.add("d-block");
+        blur.classList.remove("d-none");
+        blur.classList.add('d-block');
+        document.querySelector("body").classList.add("o-none");
+    }
+
+    function closeEdit() {
+        popup.classList.add("d-none");
+        popup.classList.remove("d-block");
+        blur.classList.add("d-none");
+        blur.classList.remove('d-block');
+        document.querySelector("body").classList.remove("o-none");
+    }
+
+    function cardZoom(cibled, direction) {
+        console.log(cibled, direction);
+
+        const increment = direction ? 1 : -1;
+        if (cibled.style.gridColumn === '') {
+            cibled.style.gridColumn = "span 2";
+        }
+
+        const gridNumberValue = +(cibled.style.gridColumn).match(/\d+/)[0];
+        const limits = {
+            min: 1,
+            max: 6,
+        }
+        if (limits.min < gridNumberValue + increment && gridNumberValue + increment < limits.max) {
+            cibled.style.gridColumn = 'span ' + (gridNumberValue + increment).toString();
+        }
+    }
+
+    $
+
+</script>
+</body>
+</html>

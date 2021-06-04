@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" viewBox="0 0 45 45">
+  <defs>
+    <filter id="Ellipse_30" x="0" y="0" width="45" height="45" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2" dy="-2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_51" data-name="Rectangle 51" width="23" height="23" transform="translate(1182 437)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Help" transform="translate(-1156 -479)">
+    <g transform="matrix(1, 0, 0, 1, 1156, 479)" filter="url(#Ellipse_30)">
+      <circle id="Ellipse_30-2" data-name="Ellipse 30" cx="13.5" cy="13.5" r="13.5" transform="translate(11 11)" fill="#47c299"/>
+    </g>
+    <g id="Groupe_de_masques_17" data-name="Groupe de masques 17" transform="translate(-13 55)" clip-path="url(#clip-path)">
+      <g id="information" transform="translate(1182 437)">
+        <g id="Groupe_88" data-name="Groupe 88">
+          <g id="Groupe_87" data-name="Groupe 87">
+            <circle id="Ellipse_29" data-name="Ellipse 29" cx="1.123" cy="1.123" r="1.123" transform="translate(10.377 15.88)" fill="#f6f5f4"/>
+            <path id="Tracé_56" data-name="Tracé 56" d="M11.5,0A11.5,11.5,0,1,0,23,11.5,11.494,11.494,0,0,0,11.5,0Zm0,21.2a9.7,9.7,0,1,1,9.7-9.7A9.7,9.7,0,0,1,11.5,21.2Z" fill="#f6f5f4"/>
+            <path id="Tracé_57" data-name="Tracé 57" d="M17,9.788a3.6,3.6,0,0,0-3.594,3.594.9.9,0,0,0,1.8,0,1.8,1.8,0,1,1,1.8,1.8.9.9,0,0,0-.9.9v2.246a.9.9,0,0,0,1.8,0V16.862A3.594,3.594,0,0,0,17,9.788Z" transform="translate(-5.5 -4.016)" fill="#f6f5f4"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

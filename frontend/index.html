@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spleeen</title>
+
+    <!-- JQuery Avant Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Vue-router pour injection des composants => routage & navigation -->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <!-- Lib Axios pour Ajax -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Librairie momentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Liens vers les CSS locaux -->
+    <link rel="stylesheet" href="styles/css/normalize.css">
+    <link rel="stylesheet" href="styles/css/class.css">
+    <link rel="stylesheet" href="styles/css/timeline.css">
+    <link rel="stylesheet" href="styles/css/stylesheet.css">
+    <link rel="stylesheet" href="styles/css/page_layout.css">
+    <link rel="stylesheet" href="styles/css/grid.css">
+
+</head>
+
+<body class="bc-purple-dark-ultra editor index bi">
+<div id="app">
+    <header class="p-relative">
+        <nav class="navbar d-grid">
+            <ul class="navbar-nav span-4 d-flex flex-d-row just-c-f-s gap2">
+                <li class="nav-item">
+                    <router-link class="nav-link"
+                                 :to="{ name: 'Timeline'}">
+                        Mes timelines
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link"
+                                 :to="{ name: 'Offres' }">
+                        Premium
+                    </router-link>
+                </li>
+            </ul>
+
+            <div class="navbar-brand span-4">
+            <router-link class="nav-link" :to="{ name: 'Accueil' }">
+                <figure class="d-flex flex-d-column just-c-c align-i-c">
+                    <img src="img/logo.svg" alt="Spleeen" width="50"
+                         height="50"
+                         class="logo">
+                    <figcaption class="spleeen">Spleeen</figcaption>
+                </figure>
+            </router-link>
+            </div>
+
+            <div class="span-4 d-flex just-c-f-e align-i-c m-auto-0">
+                <router-link class="nav-link" :to="{ name: 'Offres'}">
+                    Premium
+                </router-link>
+
+                <router-link class="nav-link" :to="{ name: 'Connexion'}">
+                    <button class="greenbutton">
+                        Se connecter
+                    </button>
+                </router-link>
+
+                <router-link class="nav-link" :to="{ name: 'CreateUser'}">
+                    <button class="greenbutton">
+                        S'inscrire
+                    </button>
+                </router-link>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Point d'injection des composants -->
+    <router-view></router-view>
+
+    <footer class="bc-purple-dark-ultra">
+        <div class="footer d-grid">
+            <div class="gcs-1 span-2 m-auto-0">
+                <figure class="d-flex flex-d-column just-c-c align-i-c">
+                    <img src="img/logo.svg" alt="Spleeen" width="50" height="50"
+                         class="logo">
+                    <figcaption class="spleeen"><a href="#">@2021 Spleeen</a></figcaption>
+                </figure>
+            </div>
+
+            <div class="d-flex flex-d-column span-3 m-auto-0">
+                <h5>Mentions légales</h5>
+                <a href="a-propos.html">Conditions générales d'utilisation</a>
+                <a href="a-propos.html">Politique de confidentialité</a>
+            </div>
+            <div class="d-flex flex-d-column span-2 m-auto-0">
+                <h5>À propos</h5>
+                <a href="a-propos.html">Qui sommes-nous ?</a>
+                <a href="http://mmimontbeliard.com/">MMI Montbéliard</a>
+            </div>
+
+
+            <div class="d-flex flex-d-column span-3 m-auto-0">
+                <h5>Nous contacter</h5>
+                <form id="form">
+
+                    <br/>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">MAIL</span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Renseignez votre adresse mail" required>
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn btn-primary float-right">Valider</button>
+                </form>
+            </div>
+
+            <div class="d-flex flex-d-column  span-2 m-auto-0">
+                <h5>Nous retrouver</h5>
+                <a href="https://www.facebook.com/Spleeen-106491278189124" class="Facebook">Facebook</a>
+                <a href="https://www.instagram.com/spleeen1/" class="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Composants utilisés -->
+<script src="pages/accueil.vue.js"></script>
+<script src="pages/timeline.vue.js"></script>
+<script src="pages/offres.vue.js"></script>
+<script src="pages/a-propos.vue.js"></script>
+<script src="create/createTimeline.vue.js"></script>
+<script src="create/createMusicsheet.vue.js"></script>
+<script src="create/createUser.vue.js"></script>
+
+<!-- Routing vueJS des pages -->
+<script>
+    // Les routages et navigations de l'application
+    var routes = [
+        {   path: '/',                      name: "Accueil",                component: Accueil},
+        {   path: '/Timeline',              name: "Timeline",               component: Timeline},
+        {   path: '/offres',                name: "Offres",                 component: Offres},
+        {   path: '/a-propos',              name: "Propos",                 component: Propos},
+        {   path: '/CreateUser',            name: "CreateUser",             component: CreateUser},
+        {   path: '/CreateTimeline',        name: "CreateTimeline",         component: CreateTimeline},
+        {   path: '/CreateMusicsheet',      name: "CreateMusicsheet",       component: CreateMusicsheet}
+    ];
+
+    // Le router initialisé sur la SPA
+    var router = new VueRouter(
+        {routes:routes}
+    );
+
+    // La Vue de l'application
+    var app = new Vue({
+        el: '#app',
+        router:router
+    })
+</script>
+
+</body>
+</html>

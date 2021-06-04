@@ -1,0 +1,113 @@
+/* ------------------------ FONT ------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
+
+
+
+/* ------------------------ DOCUMENT ------------------------ */
+html {
+    font-size: 62.5%;
+}
+
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: Karla, sans-serif;
+    color: #f6f5f4;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-variant: normal;
+    font-weight: normal;
+    background-color: #181426;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+/* ------------------------ TEXTE ------------------------ */
+p{
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+    font-family: Karla, sans-serif;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+.form-control{
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+    font-family: Karla, sans-serif;
+    font-weight: 500;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    text-indent: 0;
+    padding-inline-start: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #f6f5f4;
+}
+
+a:hover {
+    color: #47C299;
+}
+/* ------------------------ TITLES ------------------------ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Work Sans, sans-serif;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3.7rem;
+    line-height: 3.9rem;
+    color: #47C299;
+    padding-bottom: 2.5rem;
+}
+
+h2{
+    font-weight: 800;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+}
+
+h3 {
+
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+}
+
+h6 {
+
+}
+

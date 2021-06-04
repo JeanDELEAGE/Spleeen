@@ -1,0 +1,481 @@
+
+/* ------------------------ HEADER ------------------------ */
+header > figure {
+    width: 7.6%;
+    height: auto;
+    padding-left: 100px;
+    padding-top: 75px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+header .spleeen {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+header .logo {
+    height: 73px;
+    width: auto;
+}
+
+/* ------------------------ SECTION 1 ------------------------ */
+.redecouvrez-votre-musique {
+    margin: 0;
+    width: 1920px;
+    height: calc(-147px + 1080px);
+}
+
+.redecouvrez-votre-musique h1 {
+    position: relative;
+    width: 844px;
+    height: auto;
+    padding-top: 106px;
+    margin-top: 0;
+    margin-left: 822px;
+    margin-bottom: 24px;
+}
+
+.landing-page h1:after {
+    content: url("../../img/landing_page/deco01.svg");
+    position: absolute;
+    display: block;
+    top: 225px;
+    right: -254px;
+}
+
+.redecouvrez-votre-musique p {
+    width: 582px;
+    height: auto;
+    margin-left: 1084px;
+}
+
+.redecouvrez-votre-musique .buttons {
+    width: 398px;
+    height: auto;
+    margin-left: 1268px;
+    margin-top: 41px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ------------------------ SECTION 2 ------------------------ */
+.un-besoin-notre-reponse {
+    width: 1920px;
+    height: 477px;
+    padding-left: 246px;
+    padding-right: 254px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.un-besoin-notre-reponse > h2 {
+    width: 544px;
+    height: auto;
+    margin: 0;
+}
+
+.idee, .projet {
+    position: relative;
+    width: 252px;
+    height: 239px;
+}
+
+.idee h4, .projet h4 {
+    margin-top: 0;
+}
+
+.idee:before, .projet:before {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    left: -60px;
+}
+
+.idee:before {
+    content: url("../../img/landing-page/ampoule.svg");
+}
+
+.projet:before {
+    content: url("../../img/landing-page/layer.svg");
+}
+
+.idee a, .projet a {
+    position: absolute;
+    bottom: 0;
+}
+
+.idee a:after, .projet a:after {
+    content: url("../../img/landing_page/link.svg");
+    position: absolute;
+    left: 116px;
+    top: 1px;
+}
+
+
+/* ------------------------ SECTION 3 ------------------------ */
+.edition-personalise {
+    width: 1920px;
+    height: 659px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline {
+    width: 836px;
+    height: 395px;
+    margin-left: 246px;
+}
+
+.edition-personalise h2 {
+    width: 544px;
+    height: auto;
+    line-height: 88px;
+    margin: 0;
+}
+
+.edition-personalise h4 {
+    margin-top: 0;
+}
+
+.edition-personalise > div {
+    width: 690px;
+    height: 527px;
+    margin-right: 108px;
+}
+
+.edition-personalise > div > div {
+    width: 690px;
+    height: 211px;
+    margin-top: 34px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.edition-personalise > div > div > div:first-of-type {
+    width: 252px;
+    height: auto;
+}
+
+.edition-personalise > div > div > div:first-of-type > p {
+    line-height: initial;
+}
+
+.edition-personalise > div > div > div:last-of-type {
+    width: 398px;
+    height: auto;
+}
+
+.plateformes {
+    width: 398px;
+    height: 140px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    /*background: transparent;*/
+    /* Note: currently only Safari supports backdrop-filter */
+    backdrop-filter: blur(38px);
+    --webkit-backdrop-filter: blur(38px);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.plateformes > div {
+    width: calc(389px / 2);
+    height: 46px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.plateformes img {
+    width: 46px;
+    height: 46px;
+    margin-left: 19px;
+}
+
+.plateformes p {
+    margin-left: 19px;
+}
+
+
+/* ------------------------ SECTION 4 ------------------------ */
+.offre-premium {
+    width: 1274px;
+    height: 309px;
+    margin: calc(2284px - 2167px) 392px;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offre-premium > h2 {
+    position: absolute;
+    left: 0;
+    width: 544px;
+    height: auto;
+}
+
+.offre {
+    position: absolute;
+    right: 0;
+    width: 690px;
+    height: 309px;
+}
+
+.offre > * {
+    margin-left: 44px;
+}
+
+.offre > h4, .offre > p:last-of-type {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.offre > h4 {
+    position: relative;
+}
+
+.offre > h4:after {
+    content: url('../../img/landing_page/premium_star.svg');
+    position: absolute;
+    left: 222px;
+    top: 1.5px;
+}
+
+.offre > p:last-of-type {
+    position: absolute;
+    bottom: 0;
+}
+
+.offre > div {
+    width: 483px;
+    height: 75px;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.offre > div > p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 173px;
+    height: auto;
+    margin: 0;
+}
+
+.offre ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+.offre li::before {
+    content: url("../../img/landing_page/checked.svg");
+    margin-right: 15px;
+}
+
+.offre hr {
+    position: absolute;
+    bottom: 82px;
+}
+
+.offre a {
+    position: absolute;
+    bottom: 117px;
+}
+
+
+/* ------------------------ SECTION 5 ------------------------ */
+.support {
+    position: relative;
+    margin-top: 264px;
+    margin-bottom: 364px;
+}
+
+.support > h2 {
+    width: 600px;
+    height: auto;
+    padding-top: 225px;
+    margin-left: 200px;
+}
+
+.support > p {
+    width: 439px;
+    height: auto;
+    margin-left: 644px;
+    margin-top: 265px;
+}
+
+.support > figure > figcaption {
+    width: 357px;
+    height: auto;
+    margin-left: 2857px;
+    z-index: 10;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 250px;
+}
+
+.support > figure > figcaption::before {
+    content: url("../../img/landing_page/arrow.svg");
+    position: absolute;
+    left: -25px;
+    top: -75px;
+}
+
+.mockup {
+    position: absolute;
+    z-index: -1;
+    top: -185px;
+    right: 185px;
+    display: block;
+}
+
+.fond-mockup {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    top: -30px;
+    left: 150px;
+}
+
+
+/*------------------------ FOOTER ------------------------*/
+footer {
+    height: 158px;
+    display: grid;
+    grid-auto-columns: 226px 135px 120px 130px 163px;
+    grid-template-areas: " mentions a-propos logo retrouver contact ";
+    grid-gap: 130px;
+    grid-column-start: revert;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+    border-top: 1px solid #5E48A4;
+    padding: 15px 0;
+}
+
+/* ------------------------ FOOTER ELEMENTS ------------------------ */
+footer h5 {
+    margin-top: 0;
+}
+footer a {
+    margin-top: 10px;
+    line-height: 3rem;
+}
+
+footer .logo {
+    width: 27px;
+    height: auto;
+}
+
+footer>div:nth-of-type(1){
+    grid-area: mentions;
+    position: relative;
+}
+
+footer>div:nth-of-type(2){
+    grid-area: a-propos;
+}
+
+footer>div:nth-of-type(3){
+    grid-area: logo;
+    text-align: center;
+}
+
+footer>div:nth-of-type(4){
+    grid-area: retrouver;
+}
+
+footer>div:nth-of-type(5){
+    grid-area: contact;
+    position: relative;
+}
+
+.Facebook,
+.Instagram{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-indent: 30px;
+    line-height: 2rem;
+}
+
+.Instagram {
+    background-image: url("../../img/landing_page/insta.svg");
+}
+
+.Facebook{
+    background-image: url("../../img/landing_page/fb.svg");
+}
+
+footer>div:first-of-type:after {
+    content: url("../../img/landing_page/separate.svg");
+    position: absolute;
+    top: 55px;
+    left: 325px;
+}
+
+footer>div:last-of-type::before {
+    content: url("../../img/landing_page/separate.svg");
+    position: absolute;
+    top: 55px;
+    right: 250px;
+}
+
+
+/*------------------------ CALL TO ACTION ------------------------*/
+.landing-page>.buttons {
+    width: 580px;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.call {
+    display: block;
+    margin: 50px auto;
+}
+
+
+
+
+
+/*MISE EN PLACE D'UNE GRILLE CSS*/
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.redecouvrez-votre-musique {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(12, 106px);*/
+/*    grid-gap: 40px;*/
+/*}*/

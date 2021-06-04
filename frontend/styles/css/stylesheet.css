@@ -1,0 +1,60 @@
+.greenbutton {
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    width: 186px;
+    height: 53px;
+    border-radius: 5rem;
+    background: #47c299;
+    box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.16);
+}
+
+.whitebutton {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #604aa7;
+    width: 185px;
+    height: 50px;
+    border-radius: 5rem;
+    background: #f6f5f4;
+    box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.16);
+}
+
+.purplebutton {
+    font-size: 2.0rem;
+    text-align: center;
+    color: #ffffff;
+    width: 230px;
+    height: 72px;
+    border-radius: 5rem;
+    border: 1px solid #47c299;
+    backdrop-filter: blur(1px);
+    --webkit-backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.buttons {
+    outline: none;
+}
+
+.add-sheet{
+    outline: none;
+    border-color: #816bc7;
+    width: 84px;
+    height: 84px;
+}
+
+.buttons *{
+    cursor: pointer;
+}
+
+.spleeen {
+    font-family: "Bookman Sans", sans-serif;
+    font-weight: normal;
+}
+
+.blur{
+    height: 350px;
+    backdrop-filter: blur(13px) brightness(50%);
+}

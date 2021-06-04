@@ -1,0 +1,128 @@
+/*----------- Controller -----------*/
+.zoom {
+    grid-row: 1;
+    grid-column-start: 10;
+}
+.zoom button {
+    display: block;
+    margin: 0 auto;
+}
+
+/*----------- Gestion de la grille -----------*/
+@media only screen and (min-width: 24em) {
+    :root {
+        --nb_columns: 3;
+        --gutter: 1rem;
+        --size: 1;
+    }
+}
+
+@media only screen and (min-width: 42em) {
+    :root {
+        --nb_columns: 6;
+        --gutter: 2rem;
+        --size: 2;
+    }
+}
+
+@media only screen and (min-width: 62em) {
+    :root {
+        --nb_columns: 12;
+        --gutter: 2rem;
+        --size: 2;
+    }
+}
+
+/*----------- Mise en place de la grille -----------*/
+.grid_timeline {
+    display: grid;
+    grid-template-columns: repeat(var(--nb_columns), 1fr);
+    grid-gap: var(--gutter);
+    width: 100%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+}
+
+/*----------- Styles -----------*/
+/*----------- Card -----------*/
+.card {
+    grid-column: span var(--size);
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid #816bc7;
+}
+
+.card p, .card span, .card h3{
+    padding: 15px;
+}
+
+.card p{
+    height: 180px;
+}
+
+.timeline { grid-row: 2; }
+/*----------- Editor -----------*/
+.editor > p:before {
+    width: 45px;
+    height: 45px;
+    background-image: url("../../img/Help.svg");
+}
+
+.editor .link-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-container > img {
+    margin: 0 auto;
+    vertical-align: center;
+}
+
+/*.bg-img-1 {*/
+/*    background-image: url("../../img/01.jpg");*/
+/*}*/
+
+/*.bg-img-2 {*/
+/*    background-image: url("../../img/02.jpg");*/
+/*}*/
+
+/*.bg-img-3 {*/
+/*    background-image: url("../../img/03.jpg");*/
+/*}*/
+
+/*.bg-img-4 {*/
+/*    background-image: url("../../img/04.jpg");*/
+/*}*/
+
+.courant {
+    border: 2px solid black;
+}
+
+.popup{
+    top: 20%;
+    left: calc(50% - 250px);
+    height: 50%;
+    width: 25%;
+    border-radius: 15px;
+    border: 1px solid black;
+    z-index: 4;
+}
+
+.blur{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+}

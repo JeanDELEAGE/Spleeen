@@ -1,0 +1,120 @@
+/*---------------------------- START ----------------------------*/
+.gcs-1{
+    grid-column: 1;
+}
+.gcs-2{
+    grid-column-start: 2;
+}
+.gcs-3{
+    grid-column-start: 3;
+}
+.gcs-4{
+    grid-column-start: 4;
+}
+.gcs-5{
+    grid-column-start: 5;
+}
+.gcs-6{
+    grid-column-start: 6;
+}
+.gcs-7{
+    grid-column-start: 7;
+}
+.gcs-8{
+    grid-column-start: 8;
+}
+.gcs-9{
+    grid-column-start: 9;
+}
+.gcs-10{
+    grid-column-start: 10;
+}
+.gcs-11{
+    grid-column-start: 11;
+}
+
+/*---------------------------- END ----------------------------*/
+.gce-1{
+   grid-column-end: 1;
+}
+.gce-2{
+    grid-column-end: 2;
+}
+.gce-3{
+    grid-column-end: 3;
+}
+.gce-4{
+    grid-column-end: 4;
+}
+.gce-5{
+    grid-column-end: 5;
+}
+.gce-6{
+    grid-column-end: 6;
+}
+.gce-7{
+    grid-column-end: 7;
+}
+.gce-8{
+    grid-column-end: 8;
+}
+.gce-9{
+    grid-column-end: 9;
+}
+.gce-10{
+    grid-column-end: 10;
+}
+.gce-11{
+    grid-column-end: 11;
+}
+.gce-12{
+    grid-column-end: 12;
+}
+.gce-13{
+    grid-column-end: 13;
+}
+
+/*---------------------------- SPAN ----------------------------*/
+.span-1{
+    grid-column: span 1;
+}
+.span-2{
+    grid-column: span 2;
+}
+.span-3{
+    grid-column: span 3;
+}
+.span-4{
+    grid-column: span 4;
+}
+.span-5{
+    grid-column: span 5;
+}
+.span-6{
+    grid-column: span 6;
+}
+.span-7{
+    grid-column: span 7;
+}
+.span-8{
+    grid-column: span 8;
+}
+.span-9{
+    grid-column: span 9;
+}
+.span-10{
+    grid-column: span 10;
+}
+.span-11{
+    grid-column: span 11;
+}
+.span-12{
+    grid-column: span 12;
+}
+
+.grs-1{
+    grid-row-start: 1;
+}
+.grs-2{
+    grid-row-start: 2;
+}
